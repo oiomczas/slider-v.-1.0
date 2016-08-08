@@ -16,6 +16,28 @@ body {
   display: flex;
   align-items: center; }
 
+.wraperwrapera {
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+
+.dots {
+  transform: translateY(-30px);
+  width: 30px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; }
+  .dots span {
+    width: 20px;
+    height: 20px;
+    background: #eee;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 15px; }
+
 .content {
   width: 500px;
   margin: 0 auto; }

@@ -16,7 +16,22 @@
     prev = document.querySelector('.prev'),
     next = document.querySelector('.next'),
     timerImages = setInterval(updateIMG, 2000),
-    timerDesc = setInterval(updateFigcaption, 2000);
+    timerDesc = setInterval(updateFigcaption, 2000),
+    spans = document.querySelectorAll('span'),
+    spanLength = spans.length;
+  
+  for (var i = 0; i < spanLength; i++){   //dodaje obsluge zdarzenia do kazdej kropki
+    spans[i].addEventListener('click', dotClick);
+  }
+  
+  function dotClick(){  //zmiana obrazka po kliknieciu w kropke
+    
+    var dataValue = this.dataset.img;
+    index = dataValue - 1 ;
+    stopStart();
+    updateIMG();
+    updateFigcaption();
+  }
     
   function updateFigcaption() {  //podmienia podpis obrazka
     description.innerHTML = images[index].desc;
